@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 //database connection
-mongoose.connect("mongodb://localhost/WebScraper", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/News-Scraper", { useNewUrlParser: true });
 
 
 
@@ -46,7 +46,7 @@ app.get("/scrape", function(req, res) {
         .text();
       result.link = $(this)
         .children("a")
-        .attr("href", "a");
+        .attr("href");
 
       // new articles created
       db.Article.create(result)
