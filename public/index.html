@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>News-Scraper</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <style>
+        .jumbotron {
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-image: url("../images/jumbotron.png");
+
+        }
+
+        .card-header {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url("../images/jumbotron.png")
+        }
+
+        body {
+            background-image: url("../images/background.png")
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+
+        <div class="jumbotron">
+            <div class="container">
+                <h1>News-Scraper App</h1>
+            </div>
+        </div>
+
+
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="card">
+                <div class="card-header">
+                    <button id="scraper"><a href="localhost:3000/scrape">Click here to scrape!</a></button>
+                </div>
+
+                <div class="card-body" id=articles>
+                    
+                </div>
+
+                <div class="card-body" id="notes">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
