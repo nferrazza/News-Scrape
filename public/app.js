@@ -12,7 +12,7 @@ $(document).on("click", "p", function() {
     
     $("#notes").empty();
 
-    const thisId = $(this).attr("data-id");
+    var thisId = $(this).attr("data-id");
 
     $.ajax({
         method: "GET",
@@ -22,10 +22,10 @@ $(document).on("click", "p", function() {
     .then(function(data){
         console.log(data);
 
-        $("#notes").append("<h2>" + data.title + "</h2>");
+        $("#notes").append("<h6>" + data.title + "</h6 >");
         $("#notes").append("<input_id = 'titleinput' name= 'title'>");
         $("#notes").append("<textarea id='bodyinput' name='body'></textarea>");
-        $("#notes").append("<button data-id='" + data._id + "' id=' id='savenote'>Save Note</button>");
+        $("#notes").append("<button data-id='" + data._id + "' id='savenote'>Save Note</button>");
 
 
         if (data.note) {
@@ -40,7 +40,7 @@ $(document).on("click", "p", function() {
 
 //savenote
 $(document).on("click", "#savenote", function() {
-    let thisId = $(this).attr("data-id");
+     thisId = $(this).attr("data-id");
 
     $.ajax({
         method: "POST",

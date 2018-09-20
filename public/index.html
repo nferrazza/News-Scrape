@@ -10,20 +10,56 @@
     <style>
         .jumbotron {
             text-align: center;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            background-image: url("../images/jumbotron.png");
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            background-color: rgb(226, 150, 145);
+
 
         }
 
         .card-header {
             text-align: center;
             font-family: Arial, Helvetica, sans-serif;
-            background-image: url("../images/jumbotron.png")
+            background-color: rgb(220, 224, 161);
         }
 
-        body {
-            background-image: url("../images/background.png")
+        #container {
+            width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 2%;
+        background-color: rgba(78, 82, 78, 0.603);
         }
+
+        #articles {
+            display: inline-block;
+            overflow: auto;
+            width: 50%;
+            height: 500px;
+            background-color: rgba(128, 155, 245, 0.733);
+            text-align: center;
+            
+            
+        }
+        
+        #notes {
+            float: left;
+            width: 25%;
+        }
+
+
+        textarea, input {
+        display: block;
+        width: 100%;
+        background-color: rgb(243, 213, 174);
+      }
+        input {
+        height: 36px;
+        font-size: 24px;
+      }
+        textarea {
+        height: 200px;
+        font-size: 18px;
+      }
 
 
     </style>
@@ -33,7 +69,8 @@
 
         <div class="jumbotron">
             <div class="container">
-                <h1>News-Scraper App</h1>
+                <h1>InfoWars Web Scraper</h1>
+                <h4>If you are using this website, InfoWars has been officially taken down by big tech! <br>Run for your lives!<br>But before you go, don't forget to comment on the articles below!</h4>
             </div>
         </div>
 
@@ -41,16 +78,12 @@
     <div class="row">
         <div class="col-lg-12">
 
-            <div class="card">
-                <div class="card-header">
-                    <button id="scraper"><a href="localhost:3000/scrape">Click here to scrape!</a></button>
-                </div>
-
-                <div class="card-body" id=articles>
+                <div class="card-body" id="articles">
                     
                 </div>
-
-                <div class="card-body" id="notes">
+                <div class="card-header" id="notes">
+                    
+                    </div>
                     
                 </div>
             </div>
